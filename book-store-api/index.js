@@ -16,6 +16,9 @@ mongodb.connect();
 server.listen(3100);
 server.use(cors("*"));
 
+// to enable the post method
+server.use(express.json());
+
 server.use("/api/Book", bookRoutes)
 
 server.get("/", (req, res)=>{
